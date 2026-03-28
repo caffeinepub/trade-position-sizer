@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    --background: 0.1 0.012 240;
+    --foreground: 0.93 0.01 240;
+    --card: 0.15 0.015 240;
+    --card-foreground: 0.93 0.01 240;
+    --popover: 0.15 0.015 240;
+    --popover-foreground: 0.93 0.01 240;
+    --primary: 0.75 0.13 195;
+    --primary-foreground: 0.1 0.012 240;
+    --secondary: 0.2 0.025 240;
+    --secondary-foreground: 0.93 0.01 240;
+    --muted: 0.2 0.015 240;
+    --muted-foreground: 0.72 0.02 240;
+    --accent: 0.7 0.15 55;
+    --accent-foreground: 0.1 0.012 240;
+    --destructive: 0.6 0.18 25;
+    --destructive-foreground: 0.93 0.01 240;
+    --border: 0.28 0.02 240;
+    --input: 0.18 0.018 240;
+    --ring: 0.75 0.13 195;
+    --success: 0.75 0.17 155;
+    --teal: 0.75 0.13 195;
+    --amber: 0.7 0.15 55;
+    --results-bg: 0.16 0.04 240;
+    --chart-1: 0.75 0.13 195;
+    --chart-2: 0.7 0.15 55;
+    --chart-3: 0.75 0.17 155;
+    --chart-4: 0.6 0.18 25;
+    --chart-5: 0.72 0.02 240;
+    --sidebar: 0.12 0.012 240;
+    --sidebar-foreground: 0.93 0.01 240;
+    --sidebar-primary: 0.75 0.13 195;
+    --sidebar-primary-foreground: 0.1 0.012 240;
+    --sidebar-accent: 0.2 0.015 240;
+    --sidebar-accent-foreground: 0.93 0.01 240;
+    --sidebar-border: 0.28 0.02 240;
+    --sidebar-ring: 0.75 0.13 195;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: linear-gradient(
+      180deg,
+      oklch(0.1 0.012 240) 0%,
+      oklch(0.07 0.01 240) 100%
+    );
+    min-height: 100vh;
+  }
+}
